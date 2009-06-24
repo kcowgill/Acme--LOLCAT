@@ -1,0 +1,42 @@
+8
+
+dir
+16
+svn+ssh://kcowgill@www.c2group.net/usr/share/svn/lolcat/examples
+svn+ssh://kcowgill@www.c2group.net/usr/share/svn/lolcat
+
+
+
+2007-10-01T04:54:02.609358Z
+8
+kcowgill
+
+
+svn:special svn:externals svn:needs-lock
+
+inslolt
+file
+
+
+
+
+2007-10-01T04:52:35.000000Z
+409ab5a55f0cfc3368709605f7e5e2df
+2007-10-01T04:54:02.609358Z
+8
+kcowgill
+has-props
+
+lolcli
+file
+
+
+
+
+2007-10-01T04:49:18.000000Z
+5fa2ed5caf51b365923cc19792baed6d
+2007-10-01T04:54:02.609358Z
+8
+kcowgill
+has-props
+
