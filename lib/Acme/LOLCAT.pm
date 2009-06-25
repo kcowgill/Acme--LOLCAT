@@ -5,14 +5,16 @@ package Acme::LOLCAT;
 use strict;
 use warnings;
 
-use 5.006001; # 'our' requires a "more recent" perl.
+use 5.008; # moose likes a "more recent" perl.
 
 use Exporter;
 
 our @ISA = qw/Exporter/;
 our @EXPORT = qw/translate/;
 
-our $VERSION = '0.0.5';
+use Acme::LOLCAT::Bukkit;
+
+our $VERSION = '0.0.6';
 
 my %repl = (
    what     => [qw/wut whut/],   'you\b'   => [qw/yu yous yoo u/],
@@ -62,15 +64,15 @@ my %repl = (
 sub translate {
   my $phrase = lc shift;
 
-  $phrase =~ s{
-                $_
-              }
-              {
-                ref $repl{ $_ } eq 'ARRAY'
-                  ? $repl{ $_ }->[ rand( $#{ $repl{ $_ } } + 1 ) ]
-                  : $repl{ $_ }
-              }gex
-              for keys %repl;
+  my @bukkits = map {
+    Acme::LOLCAT::Bukkit->new( {
+      word => qr{$_},
+      replacement => $repl{$_} } )
+    } keys %repl;
+  for my $slop( @bukkits ){
+    my( $word, $replacement ) = ( $slop->word, $slop->replacement );
+    $phrase =~ s{ $word }{ $replacement }gex;
+  }
 
   $phrase =~ s/\s{2,}/ /g;
   $phrase =~ s/teh teh/teh/g; # meh, it happens sometimes.
