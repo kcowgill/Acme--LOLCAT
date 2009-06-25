@@ -10,7 +10,9 @@ WriteMakefile(
     ABSTRACT_FROM       => 'lib/Acme/LOLCAT.pm',
     PL_FILES            => {},
     PREREQ_PM => {
-        'Test::More' => 0,
+        'Test::More'                   => 0,
+        'Moose'                        => 0.79,
+        'Moose::Util::TypeConstraints' => , 0.79,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Acme-LOLCAT-* blib pm_to_blib Makefile' },
