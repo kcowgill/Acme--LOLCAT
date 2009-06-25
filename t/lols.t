@@ -13,7 +13,7 @@ my $YOUR = qr/Y?(?:O|U)?(?:A|R)(?:E|R)?/;
 my $Z    = qr/(?:S|Z)/;
 
 like( $p = translate( "can i please have a cheeseburger?" ),
-      qr/I CAN HA$Z CHEEZBURGR\?/,
+      qr/(?:I CAN|CAN I) HA$Z CHEEZBURGR\?/,
       "translates cheeseburger phrase: $p" );
 
 like( $p = translate( "you're right, i want more pickles." ),
