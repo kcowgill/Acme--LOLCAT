@@ -5,7 +5,7 @@ package Acme::LOLCAT;
 use strict;
 use warnings;
 
-use 5.006_001; # 'our' requires a "more recent" perl.
+use 5.006001; # 'our' requires a "more recent" perl.
 
 use Exporter;
 
@@ -56,6 +56,7 @@ my %repl = (
    '\boh\b(?!.*hai)'  => [qw/o ohs/],
    'can\si\s(?:ple(?:a|e)(?:s|z)e?)?\s?have\sa' => 'i can has',
    '(?:hello|\bhi\b|\bhey\b|howdy|\byo\b),?'    => 'oh hai,',
+   '(?:god|allah|buddah?|diety)'                => 'ceiling cat',
 );
 
 sub translate {
@@ -78,6 +79,12 @@ sub translate {
   $phrase =~ s/(\?|!|,|\.)\./$1/;
   return uc $phrase;
 }
+
+# LOLCAT->can('has') # Thanks BOBTFISH :)
+sub has {}
+
+# LOLCAT->can('haz') # why not?
+sub haz {}
 
 1;
 
@@ -129,6 +136,20 @@ and don't want translate() to be exported into your namespace:
 
   my $translated_text
     = Acme::LOLCAT::Translate( $orginal_text );
+
+=back
+
+=head1 IM IN UR NAMESPAEC AND I CAN HAZ
+
+=over
+
+=item has
+
+Every LOLCAT->can('has')
+
+=item haz
+
+I CAN HAZ TOO
 
 =back
 

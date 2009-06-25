@@ -45,4 +45,8 @@ like( $p = translate( "free parties, events & more! what's happening?  who's goi
       "translated party ad text: $p" );
 
 like( $p = translate( "I have a bucket." ),
-      qr/I HA[SVZ] ?A? BUKK/, "translated bucket having phrse: $p" );
+      qr/I HA[SVZ] ?A? BUKK/, "translated bucket having phrase: $p" );
+
+like( $p = translate( "Thank god I've updated this module." ),
+      qr/(?:THN?X|(?:T|F)ANK) CEILING CAT IVE UPDATED THIS MODULE/,
+      "translated diety phrase: $p" );
