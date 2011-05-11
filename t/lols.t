@@ -48,5 +48,5 @@ like( $p = translate( "I have a bucket." ),
       qr/I HA[SVZ] ?A? BUKK/, "translated bucket having phrase: $p" );
 
 like( $p = translate( "Thank god I've updated this module." ),
-      qr/(?:THN?X|(?:T|F)ANK) CEILING CAT IVE UPDATED THIS MODULE/,
+      qr/(?:THN?X|(?:T|F)ANK) CEILI?NG CAT IVE UPDATED THIS MODULE/,
       "translated diety phrase: $p" );
