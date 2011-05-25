@@ -9,8 +9,6 @@ To install this module, run the following commands:
     make test
     make install
 
-THEN LET THE LOLS COMMENCE!
-
 SUPPORT AND DOCUMENTATION
 
 After installing, you can find documentation for this module with the perldoc command.
