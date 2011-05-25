@@ -44,7 +44,8 @@ sub prebuilt_insult {
   "If brains were dynamite, you wouldn't have enough to blow the kneecap off a flea.",
   "If your brain matter was axle grease, there wouldn't be enough in your head to grease the dynamo on a lightening bug's ass.",
   "Here's a tip: no one will ever know that you've had a lobotomy if you wear a wig to hide to the scars; stop spewing your drivel on irc, and learn to control the slobbering.",
-  "If brains were gasoline, you wouldn't have enough to drive an ant's Go-cart around the inside of a bottle cap."
+  "If brains were gasoline, you wouldn't have enough to drive an ant's Go-cart around the inside of a bottle cap.",
+  "NO U"
   );
   return $insults[ rand @insults ];
 }

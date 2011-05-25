@@ -50,3 +50,5 @@ like( $p = translate( "I have a bucket." ),
 like( $p = translate( "Thank god I've updated this module." ),
       qr/(?:THN?X|(?:T|F)ANK) CEILI?NG CAT IVE UPDATED THIS MODULE/,
       "translated diety phrase: $p" );
+
+# I get too many false fails from this. I should really fix it.

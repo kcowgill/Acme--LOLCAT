@@ -151,6 +151,9 @@ my %repl = (
    'hello,',
 );
 
+# At some point I should really just remove this file
+# from the module, it doesn't do anything, and I think
+# it would be too hard to implement well.
 sub untranslate {
   my $phrase = lc shift;
 
