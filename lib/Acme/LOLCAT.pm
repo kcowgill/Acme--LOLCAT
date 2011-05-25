@@ -2,6 +2,8 @@
 
 package Acme::LOLCAT;
 
+# testing
+
 use strict;
 use warnings;
 
