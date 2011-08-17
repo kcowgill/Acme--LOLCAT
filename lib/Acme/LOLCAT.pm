@@ -41,7 +41,7 @@ my %repl = (
    tious    => 'shus',           'sure\b'  => 'shur',
    'tty\b'  => 'tteh',           were      => 'was',
    'ok\b'   => [ qw/'k kay/ ],   '\ba\b'   => q(),
-   ym       => 'im',             'thy\b'   => 'fee',
+   ym       => 'im',             '\Bthy\b'   => 'fee',
    '\wly\w' => 'li',             'que\w'   => 'kwe',
    oth      => 'udd',            ease      => 'eez',
    'ing\b'  => [qw/in ins ng ing/],
